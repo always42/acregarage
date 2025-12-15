@@ -1,243 +1,70 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geleceğin 100 Sorumluluğu | Future 100 Responsibilities</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        :root {
-            --bg-color: #f0f4f8;
-            --card-bg: #ffffff;
-            --text-primary: #1a365d;
-            --text-secondary: #4a5568;
-            --accent-color: #3182ce;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACRE GARAGE | Çok Yakında</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.8;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            font-size: 16px;
-            padding: 20px 0;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2.5rem;
-            background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
+body {
+  height: 100vh;
+  background: url("background.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
 
-        .language-switch {
-            text-align: right;
-            margin-bottom: 1rem;
-        }
+/* Koyu şeffaf katman */
+.overlay {
+  background: rgba(0,0,0,0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        .language-btn {
-            background: none;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-left: 0.5rem;
-        }
+/* Yazı alanı */
+.content {
+  text-align: center;
+  padding: 20px;
+}
 
-        .language-btn.active {
-            background: var(--accent-color);
-            color: white;
-        }
+.content h1 {
+  font-size: 48px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
 
-        h1 {
-            color: var(--text-primary);
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
-        }
+.content p {
+  font-size: 16px;
+  opacity: 0.85;
+  letter-spacing: 2px;
+}
 
-        .intro-text {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .responsibility-item {
-            background: var(--card-bg);
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .number {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 1.1rem;
-            min-width: 32px;
-        }
-
-        .content {
-            flex: 1;
-            line-height: 1.6;
-        }
-
-        .content .en {
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
-            font-size: 0.95em;
-        }
-
-        .footer-text {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            text-align: center;
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        [lang="en"] {
-            display: none;
-        }
-
-        .show-en [lang="tr"] {
-            display: none;
-        }
-
-        .show-en [lang="en"] {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .responsibility-item {
-                padding: 1rem;
-            }
-        }
-    </style>
+/* Mobil uyum */
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 34px;
+  }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="language-switch">
-            <button class="language-btn active" onclick="switchLanguage('tr')">TR</button>
-            <button class="language-btn" onclick="switchLanguage('en')">EN</button>
-        </div>
-
-        <h1 class="text-center" lang="tr">Geleceğin 100 Sorumluluğu</h1>
-        <h1 class="text-center" lang="en">Future 100 Responsibilities</h1>
-
-        <p class="intro-text text-center" lang="tr">Yaşamı korumak için birlikte hareket edelim.</p>
-        <p class="intro-text text-center" lang="en">Let's act together to protect life.</p>
-        
-        <div class="responsibilities-list">
-            <div class="responsibility-item">
-                <div class="number">01</div>
-                <div class="content">
-                    <div lang="tr">Tüm dünyada yenilenebilir enerji kaynaklarının kullanımı zorunlu hale getirilmeli.</div>
-                    <div lang="en">Worldwide mandatory implementation of renewable energy sources.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">02</div>
-                <div class="content">
-                    <div lang="tr">Uzay çöplüğü temizliği için global bir iş birliği başlatılmalı.</div>
-                    <div lang="en">Initiate global cooperation for space debris cleanup.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">03</div>
-                <div class="content">
-                    <div lang="tr">Plastik kullanımını tamamen sonlandıracak alternatif malzemeler geliştirilip yaygınlaştırılmalı.</div>
-                    <div lang="en">Develop and implement alternative materials to completely end plastic usage.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">04</div>
-                <div class="content">
-                    <div lang="tr">Dünyadaki tüm ulusların karbon salınımını %70 azaltması için bağlayıcı uluslararası anlaşmalar yapılmalı.</div>
-                    <div lang="en">Establish binding international agreements for all nations to reduce carbon emissions by 70%.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">05</div>
-                <div class="content">
-                    <div lang="tr">Gıda israfını önlemek için tüm ülkelerde zorunlu yasalar çıkarılmalı.</div>
-                    <div lang="en">Implement mandatory laws in all countries to prevent food waste.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">06</div>
-                <div class="content">
-                    <div lang="tr">Doğal kaynak tüketimi, kişi başına yıllık bir sınırla düzenlenmeli.</div>
-                    <div lang="en">Regulate natural resource consumption with annual per-capita limits.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">07</div>
-                <div class="content">
-                    <div lang="tr">Eğitim sistemlerine 'ekolojik okuryazarlık' zorunlu ders olarak eklenmeli.</div>
-                    <div lang="en">Add 'ecological literacy' as a mandatory subject in education systems.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">08</div>
-                <div class="content">
-                    <div lang="tr">Dünyadaki ormanlık alanların en az %30'u koruma altına alınmalı.</div>
-                    <div lang="en">Protect at least 30% of global forest areas.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">09</div>
-                <div class="content">
-                    <div lang="tr">Nükleer enerji kullanımını azaltıp güvenlik protokolleri yeniden gözden geçirilmeli.</div>
-                    <div lang="en">Reduce nuclear energy usage and revise security protocols.</div>
-                </div>
-            </div>
-            <div class="responsibility-item">
-                <div class="number">10</div>
-                <div class="content">
-                    <div lang="tr">Toplumlar arası gelir eşitsizliğini azaltmaya yönelik küresel bir fon oluşturulmalı.</div>
-                    <div lang="en">Establish a global fund to reduce income inequality between societies.</div>
-                </div>
-            </div>
-        </div>
-
-        <p class="footer-text" lang="tr">Bu fikirleri arkadaşlarınızla paylaşarak tartışmaya katılabilirsiniz.</p>
-        <p class="footer-text" lang="en">You can participate in the discussion by sharing these ideas with your friends.</p>
+  <div class="overlay">
+    <div class="content">
+      <h1>ÇOK YAKINDA</h1>
+      <p>ACRE GARAGE • PREMIUM OTOMOTİV</p>
     </div>
-
-    <script>
-        function switchLanguage(lang) {
-            const body = document.body;
-            const buttons = document.querySelectorAll('.language-btn');
-            
-            if (lang === 'en') {
-                body.classList.add('show-en');
-            } else {
-                body.classList.remove('show-en');
-            }
-
-            buttons.forEach(btn => {
-                btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
-            });
-        }
-    </script>
+  </div>
 </body>
 </html>
